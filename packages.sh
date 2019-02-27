@@ -12,6 +12,7 @@ export PKG=(
     zathura
     ranger
     thunar
+    acpi-call
 )
 
 export AUR=(
