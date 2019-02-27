@@ -57,12 +57,14 @@ XTerm*selectToClipboard: true
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
 
-!URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
-URxvt*font: xft:Source Code Pro:size=12
-URxvt*boldFont: xft:Source Code Pro:bold:size=12
-URxvt*italicFont: xft:Source Code Pro:italic:size=12
-URxvt*boldItalicFont: xft:Source Code Pro:bolditalic:size=12
+#define font1 Source\ Code\ Pro\ for\ Powerline
+#define font2 Noto Mono for Powerline
+#define font3 DejaVu Sans Mono for Powerline
+!URxvt*font: xft:font2:size=13, xft:font3:size=13, xft:font1:size=13
+URxvt*font: xft:font1:size=13, xft:font2:size=13, xft:font3:size=13
+URxvt.letterSpace: 0
 
+!URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 ! alternative font settings with 'terminus':
 ! URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 ! URxvt.bold.font: -xos4-terminus-bold-r-normal--16-160-72-72-c-80-iso10646-1
