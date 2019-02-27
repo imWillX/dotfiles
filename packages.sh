@@ -1,6 +1,9 @@
 #!/bin/bash
 
 export PKG=(
+    diff-so-fancy
+    bat
+    rofi
     htop
     nodejs
     npm
