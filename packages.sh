@@ -12,6 +12,8 @@ export PKG=(
     zathura
     ranger
     thunar
+    python
+    python-pip
     acpi-call
     xclip
 )
