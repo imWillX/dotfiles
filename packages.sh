@@ -6,6 +6,7 @@ export PKG=(
     npm
     chromium
     firefox
+    adobe-source-code-pro-fonts
     rxvt-unicode
     sxiv
     zathura
