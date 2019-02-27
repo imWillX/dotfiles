@@ -1,0 +1,8 @@
+! Rofi config file
+! Source: https://github.com/dikiaap/dotfiles
+rofi.lines: 12
+rofi.font: Source Sans Pro 28
+rofi.show-icons: true
+rofi.theme: ~/.config/rofi/oxide.rasi
+rofi.display-window: Window
+rofi.display-drun: Search
