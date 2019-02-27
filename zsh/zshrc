@@ -96,3 +96,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias "c=xclip"
 alias "v=xclip -o"
+
+eval `dircolors ~/.dircolors`
