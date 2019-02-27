@@ -13,6 +13,7 @@ export PKG=(
     ranger
     thunar
     acpi-call
+    xclip
 )
 
 export AUR=(
