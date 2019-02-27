@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#!/usr/bash
 
-. packages.sh
+. ./packages.sh
 
 echo "Updating packages..."
 sudo pacman -Syu --needed --noconfirm
