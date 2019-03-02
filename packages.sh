@@ -21,6 +21,7 @@ export PKG=(
 )
 
 export AUR=(
+    betterlockscreen
     yay
     intellij-idea-ultimate-edition
     pycharm-professional
