@@ -3,6 +3,7 @@
 export PKG=(
     diff-so-fancy
     bat
+    feh
     rofi
     htop
     nodejs
