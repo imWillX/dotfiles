@@ -19,6 +19,8 @@ export PKG=(
     python-pip
     acpi-call
     xclip
+    jre-openjdk
+    jdk-openjdk
 )
 
 export AUR=(
