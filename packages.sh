@@ -21,6 +21,8 @@ export PKG=(
     xclip
     jre-openjdk
     jdk-openjdk
+    pandoc
+    texlive-core
 )
 
 export AUR=(
