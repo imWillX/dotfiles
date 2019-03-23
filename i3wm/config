@@ -75,11 +75,11 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # Desktop screenshot
-bindsym --release Print exec "scrot ~/Pictures/Screenshot/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Shift+Print exec "scrot ~/Pictures/Screenshot/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
 # Choose window
 bindsym --release Mod1+Sys_Req exec "import -window `xwininfo | awk '/.*Window id:.*/ {print $4}'` ~/Pictures/Screenshot/$(date --iso-8601='seconds').png"
 # Selection screenshot
-bindsym --release Shift+Print exec "scrot ~/Pictures/Screenshot/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
+bindsym --release Print exec "scrot ~/Pictures/Screenshot/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
 
 # focus_follows_mouse no
 
@@ -221,6 +221,7 @@ for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
+for_window [class="Thunar"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
