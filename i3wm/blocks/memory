@@ -1,0 +1,13 @@
+MEMORY_AVAILABLE=$(cat /proc/meminfo | grep MemAvailable | awk '{printf "%.1f\n", ($2/1024/1024)}')
+MEMORY_TOTAL=$(cat /proc/meminfo | grep MemTotal | awk '{printf "%.1f\n", ($2/1024/1024)}')
+
+AVAIL_COLOR="BLACK"
+AVAIL_BGCOLOR="#3F51B5"
+
+TOTAL_COLOR="#fff"
+TOTAL_BGCOLOR="#283593"
+
+echo "\
+<span color='${AVAIL_COLOR}' bgcolor='${AVAIL_BGCOLOR}'> <small>${MEMORY_AVAILABLE}GB</small> </span>\
+<span color='${TOTAL_COLOR}' bgcolor='${TOTAL_BGCOLOR}'> <small>${MEMORY_TOTAL}GB</small> </span>\
+"

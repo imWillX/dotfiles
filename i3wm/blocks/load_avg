@@ -1,0 +1,14 @@
+LOAD_ONE="$(cut -d ' ' -f1 /proc/loadavg)"
+LOAD_FIVE="$(cut -d ' ' -f2 /proc/loadavg)"
+LOAD_FIFTEEN="$(cut -d ' ' -f3 /proc/loadavg)"
+TEMP="$(sensors -u coretemp-isa-0000 | grep temp1_input | awk '{printf "%.1f", $2}')"
+
+#echo "<span color='black' bgcolor='#FFCC80'> <small>${LOAD_ONE}</small> </span>"
+echo "\
+<span color='black' bgcolor='#FFCC80'> \
+<small>${LOAD_ONE}</small> \
+<small>${LOAD_FIVE}</small> \
+<small>${LOAD_FIFTEEN}</small> \
+</span>\
+<span color='#fff' bgcolor='#EF6C00'><small> ${TEMP}°C </small></span>
+"

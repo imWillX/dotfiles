@@ -1,0 +1,31 @@
+BATTERY=0
+BATTERY_INFO=$(acpi -b | grep "Battery ${BATTERY}")
+BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "Full\|Charging\|Discharging")
+BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
+BATTERY_TIME=$(acpi -b 2 | grep Battery | awk '{print $5}')
+
+BGCOLOR="#E91E63"
+COLOR="#fff"
+URGENT_VALUE=10
+
+
+if [[ "${BATTERY_STATE}" = "Charging" ]]; then
+    BGCOLOR="#E91E63" # Purple
+elif [[ "${BATTERY_STATE}" = "Discharging" ]]; then
+    if [[ "${BATTERY_POWER}" -gt "50" ]]; then
+        BGCOLOR="#E91E63" # Purple
+    elif [[ "${BATTERY_POWER}" -gt "20" ]]; then
+        BGCOLOR="#F9A602" # Yellow
+    else
+        BGCOLOR="#C21807" # Red
+    fi
+else # Full
+    BGCOLOR="#E91E63"
+fi
+
+if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
+  exit 33
+fi 
+
+
+echo "<span color='${COLOR}' bgcolor='${BGCOLOR}'> <small>${BATTERY_POWER}% (${BATTERY_TIME})</small> </span>"
