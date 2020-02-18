@@ -85,6 +85,7 @@ Xcursor.size:                     0
 #define font1 Source\ Code\ Pro\ for\ Powerline
 #define font2 Noto Mono for Powerline
 #define font3 DejaVu Sans Mono for Powerline
+#define font4 FontAwesome
 !URxvt*font: xft:font2:size=13, xft:font3:size=13, xft:font1:size=13
 URxvt*font: xft:font1:size=13, xft:font2:size=13, xft:font3:size=13
 URxvt.letterSpace: 0
